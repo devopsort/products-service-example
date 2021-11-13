@@ -4,7 +4,7 @@ node ("master") {
     // Checkout custom Jenkinsfiles
     stage ("Checkout pipelines") {
         git url: "git@github.com:devopsort/Pipelines.git", 
-            branch: "Prod", 
+            branch: "main", 
             credentialsId: "products-git"
     }
 

@@ -1,5 +1,4 @@
-pipeline {
-	agent { label 'master' }
+node ("master") {
 	triggers {
        // sondea el repositorio cada 2 minutos para ver los cambios
        pollSCM('*/2 * * * *')
@@ -11,5 +10,5 @@ pipeline {
             credentialsId: "products-git"
     }
 
-    load ("products-service-example/Jenkinsfile-${env.BRANCH_NAME}").stages()
+    load "products-service-example/Jenkinsfile-${env.BRANCH_NAME}".stages()
 }

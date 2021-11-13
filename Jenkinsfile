@@ -1,6 +1,4 @@
 node ("master") {
-    // sondea el repositorio cada 2 minutos para ver los cambios
-    pollSCM('*/2 * * * *')
     // Checkout custom Jenkinsfiles
     stage ("Checkout pipelines") {
         git url: "git@github.com:devopsort/Pipelines.git", 

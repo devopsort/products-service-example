@@ -6,5 +6,5 @@ node ("master") {
             credentialsId: "products-git"
     }
 
-    load ("products-service-example/Jenkinsfile-products.groovy")
+    load ("products-service-example/Jenkinsfile-${env.BRANCH_NAME}")
 }

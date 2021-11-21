@@ -1,4 +1,4 @@
 # products-service-example
 Microservicio products
 
-PRueba 6
+PRueba 7
